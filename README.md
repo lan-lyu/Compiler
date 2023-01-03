@@ -73,9 +73,9 @@ main:
 
 ## Code Structure
 The compiling process are splited into three stages:
--  stage 1: sysY --> eeyore
--  stage 2: eeyore --> tigger
--  stage 3: tigger --> RISCV
+-  stage 1: SysY --> Eeyore
+-  stage 2: Eeyore --> Tiger
+-  stage 3: Tiger --> RISCV
 
 The file structure are shown as below, in each stage the structures are similar. Take stage 1 as an example, the folder is composed of 5 files, `source.lex` for lexical analysis, `source.yacc` for syntactic analysis, while the process of constructing and scanning the syntax tree through the data structures is defined in `parse.c` and `parse.h`.
 
@@ -85,10 +85,10 @@ The file structure are shown as below, in each stage the structures are similar.
 │   ├── parse.c     	// Parse the generated syntax tree
 │   ├── parse.h				// Definition of global data structure, key functions and symbol tables
 │   ├── run.sh				// shell script for running
-│   ├── source.l    	// for lexical analysis
+│   ├── source.l    	                // for lexical analysis
 │   └── source.y			// for syntactic analysis
-├── Stage2			 // eeyore -> tigger
-└── Stage3			 // tigger -> RISCV
+├── Stage2			 // eeyore -> tiger
+└── Stage3			 // tiger -> RISCV
 		
 3 directories, 15 files
 ```
